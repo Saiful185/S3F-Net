@@ -15,7 +15,7 @@ The S³F-Net is an asymmetric two-tower architecture. It consists of:
 
 The final, refined feature vectors from these two independent experts are then combined using a task-dependent fusion strategy to produce the final classification.
 
-![S³F-Net Architecture Diagram](figures/s3fnet_architecture.png)
+![S³F-Net Architecture Diagram](figures/S3FNet_SN1.png)
 
 ---
 
