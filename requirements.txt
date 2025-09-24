@@ -1,0 +1,10 @@
+# Core deep learning and numerical libraries
+tensorflow==2.18.0
+pandas==2.0.3
+numpy==1.25.2
+scikit-learn==1.2.2
+
+# Image processing and plotting
+opencv-python-headless==4.8.0.76
+matplotlib==3.7.1
+seaborn==0.13.1
