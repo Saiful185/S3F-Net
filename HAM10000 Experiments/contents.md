@@ -1,0 +1,2 @@
+# **Spatial-Spectral Summarizer Fusion Network (S³F-Net)**
+This folder contains the full implementation of **S³F-Net**, its spatial baseline CNN, and **SpectraNet** on the HAM10000 dataset. We use the **SpectraNet-1** variant as the spectral encoder here, and use powerful **Bilinear Fusion** to fuse the two branches (Spatial & Spectral) for S³F-Net implementation. The full architecture is customizable, feel free to do so. Edit the file paths according to your setup.
