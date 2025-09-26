@@ -3,7 +3,7 @@ S³F-Net: A Multi-Modal Approach to Medical Image Classification via Spatial-Spe
 
 **Official TensorFlow/Keras implementation for the paper: "S³F-Net: A Multi-Modal Approach to Medical Image Classification via Spatial-Spectral Summarizer Fusion Network"**
 
-> **Abstract:** Standard Convolutional Neural Networks (CNNs) have become a cornerstone of medical image analysis due to their proficiency in learning hierarchical spatial features. However, this focus on a single domain is inefficient at capturing global, holistic patterns and fails to explicitly model an image’s frequency- domain characteristics. To address these challenges, we propose the Spatial-Spectral Summarizer Fusion Network (S³F-Net), a dual-branch framework that learns from both spatial and spectral representations simultaneously. The S³F-Net integrates a deep spatial CNN for local morphology with our proposed SpectraNet branch. A key innovation within SpectraNet is the SpectralFilter Layer, which leverages the Convolution Theorem by applying a bank of learnable filters directly to an image’s Fourier spectrum via a parameter-efficient element-wise multiplication. This allows the SpectraNet to attain a global receptive field from its first layer, with its output being distilled by a lightweight ”funnel” head. We conduct a comprehensive investigation across four diverse medical imaging datasets to demonstrate S³F-Net’s efficacy and show that the optimal fusion strategy is task-dependent. With a powerful Bilinear Fusion, S³F-Net achieves a state-of-the- art competitive accuracy of 98.76% on the BRISC2025 brain tumor dataset. In contrast, a simpler Concatenation Fusion proves superior on the texture-dominant Chest X-Ray Pneumonia dataset, achieving 93.11% accuracy, also a result surpassing many top-performing, much deeper models. In all evaluated cases, the S³F-Net framework significantly outperforms its strong spatial- only baseline, demonstrating that our dual-domain approach is a powerful and generalizable paradigm for medical image analysis.
+> **Summary:** Standard Convolutional Neural Networks (CNNs) have become a cornerstone of medical image analysis due to their proficiency in learning hierarchical spatial features. However, this focus on a single domain is inefficient at capturing global, holistic patterns and fails to explicitly model an image’s frequency- domain characteristics. To address these challenges, we propose the Spatial-Spectral Summarizer Fusion Network (S³F-Net), a dual-branch framework that learns from both spatial and spectral representations simultaneously. The S³F-Net combines a deep spatial CNN for local morphology with our proposed SpectraNet branch. A key component within SpectraNet is the SpectralFilter Layer, which leverages the Convolution Theorem by applying a bank of learnable filters directly to an image’s Fourier spectrum via a parameter-efficient element-wise multiplication. This allows the SpectraNet to attain a global receptive field from its first layer, with its output being distilled by a lightweight ”funnel” head. We conduct a comprehensive investigation across four diverse medical imaging datasets to demonstrate S³F-Net’s efficacy and show that the optimal fusion strategy is task-dependent. With a powerful Bilinear Fusion, S³F-Net achieves a state-of-the- art competitive accuracy of 98.76% on the BRISC2025 brain tumor dataset. In contrast, a simpler Concatenation Fusion proves superior on the texture-dominant Chest X-Ray Pneumonia dataset, achieving up to 93.91% accuracy, also a result surpassing many top-performing, much deeper models. In all evaluated cases, the S³F-Net framework significantly outperforms its strong spatial-only baseline, demonstrating that our dual-domain approach is a powerful and generalizable paradigm for medical image analysis.
 
 ---
 
@@ -76,6 +76,17 @@ The code is organized into Jupyter/Colab notebooks (`.ipynb`) for each key exper
 1.  **Open a notebook** (e.g., `S3F-Net_Bilinear_SN1_BRISC2025.ipynb`).
 2.  **Update the paths** in the first few cells to point to your dataset's location (either on Google Drive for unzipping or a local path).
 3.  **Run the cells sequentially** to perform data setup, model training, and final evaluation.
+
+---
+
+## Pre-trained Models
+
+The pre-trained weights for our SOTA competetive models are available for download from the [v1.0.0-sn1 release](https://github.com/Saiful185/S3F-Net/releases/v1.0.0-sn1) on this repository.
+
+| Model | Trained On | Description | Download Link |
+| :--- | :--- | :--- | :--- |
+| **S³F-Net (Bilinear SN1 variant)** | BRISC2025 | The best performing model on BRISC2025 dataset. | [Link](https://github.com/Saiful185/S3F-Net/releases/download/v1.0.0-sn1/Bilinear_S3F-Net_SN1_BRISC2025.keras) |
+| **S³F-Net (Concatenation SN1 variant)** | Chest X-Ray (Pneumonia) | The best performing model on the Chest X-Ray dataset. | [Link](https://github.com/Saiful185/S3F-Net/releases/download/v1.0.0-sn1/Concatenation_S3F-Net_SN1_Chest.XRAY.keras) |
 
 ---
 
