@@ -94,7 +94,7 @@ The pre-trained weights for our SOTA competetive models are available for downlo
 
 If you find this work useful in your research, please consider citing our paper:
 @misc{siddiqui2025s3fnet,\
-      title={S$^3$F-Net: A Multi-Modal Approach to Medical Image Classification via Spatial-Spectral Summarizer Fusion Network},\ 
+      title={S³F-Net: A Multi-Modal Approach to Medical Image Classification via Spatial-Spectral Summarizer Fusion Network},\
       author={Md. Saiful Bari Siddiqui and Mohammed Imamul Hassan Bhuiyan},\
       year={2025},\
       eprint={2509.23442},\
